@@ -1,0 +1,5 @@
+#lang racket
+
+
+(define (random-choice a b)
+  (if (zero? (random 2)) a b))
