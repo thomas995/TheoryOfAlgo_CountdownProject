@@ -25,10 +25,17 @@ LargeList1 ; outputs the generated value to the console
 (define LargeList2(list-ref(list 25 50 75 100) (random 4))) ; Defines a variable LargeList that randomly generates a number from the list
 LargeList2 ; outputs the generated value to the console
 
+
+
+(define Usable_Nums(list SmallList1 SmallList2 SmallList3 SmallList4 LargeList1 LargeList2))
+'NUMBERS_GIVEN
+Usable_Nums
+
 ;TARGET NUMBER
 'TARGET
 (define TargetRange(+ 101 (random 999))) ; Generates a random value from 101 to 999 that will be used later as a target to reach
 TargetRange ; outputs the generated value to the console
+
 
 '_____________________________________
 
@@ -40,7 +47,9 @@ attemptAnswer ; outputs the generated value to the console
 (let ([arg1 attemptAnswer] [arg2 TargetRange]) ; assigns 2 values created earlier as arguments
   (cond ; the condition of the if else statement
     [(< arg1 arg2) (display "Attempt Is Too Low")] ; if the first argument is less than the second, say the attempt is too low
+    
     [(> arg1 arg2) (display arg1) (newline) (display "Attempt Is Too High")] ; if the first argument is more than the second, say the attempt is too low
+    
     [else (display arg2) (newline) (display "Attempt Is Correct!")])) ; else, if the attemp is correct, then display that the attempt was correct
 
 
