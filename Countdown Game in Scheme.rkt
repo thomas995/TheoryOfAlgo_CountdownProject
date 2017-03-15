@@ -56,6 +56,11 @@ attemptAnswer ; outputs the generated value to the console
 ;Define method ops which contains a list of the main operators
 (newline)(define ops(list '+ '- '/ '*))
 
-((cartesian-product ops ops ops ops ops ))
+;using the cartesian-product to get every possible combination of each set
+(cartesian-product ops ops ops ops ops )
+
+;using the C-P to get every possible combination of all the randomly selected numbers generated earlier
+((cartesian-product Usable_Nums Usable_Nums Usable_Nums Usable_Nums Usable_Nums ))
+
 
  
