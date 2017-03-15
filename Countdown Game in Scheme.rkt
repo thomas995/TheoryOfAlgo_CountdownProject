@@ -26,21 +26,20 @@ LargeList1 ; outputs the generated value to the console
 LargeList2 ; outputs the generated value to the console
 
 
-
+; Took previous numbers and generated them into a single method
 (define Usable_Nums(list SmallList1 SmallList2 SmallList3 SmallList4 LargeList1 LargeList2))
-'NUMBERS_GIVEN
+(display "NUMBERS GIVEN")(newline)
 Usable_Nums
 
 ;TARGET NUMBER
-'TARGET
+(display "TARGET")(newline)
 (define TargetRange(+ 101 (random 999))) ; Generates a random value from 101 to 999 that will be used later as a target to reach
 TargetRange ; outputs the generated value to the console
 
 
-'_____________________________________
-
 ; Adds all the randomly selected numbers from the list to get an "attempt answer"
 (define attemptAnswer(+ SmallList1 SmallList2 SmallList3 SmallList4 LargeList1 LargeList2))
+(display "ATTEMPT")(newline)
 attemptAnswer ; outputs the generated value to the console
 
 ;IS THE ATTEMPTED ANSWER CORRECT
@@ -52,7 +51,11 @@ attemptAnswer ; outputs the generated value to the console
     
     [else (display arg2) (newline) (display "Attempt Is Correct!")])) ; else, if the attemp is correct, then display that the attempt was correct
 
+(newline)(display "__________________________________")
 
+;Define method ops which contains a list of the main operators
+(newline)(define ops(list '+ '- '/ '*))
 
+((cartesian-product ops ops ops ops ops ))
 
-
+ 
