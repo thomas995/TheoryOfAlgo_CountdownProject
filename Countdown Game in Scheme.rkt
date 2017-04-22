@@ -25,6 +25,10 @@ LargeList1 ; outputs the generated value to the console
 (define LargeList2(list-ref(list 25 50 75 100) (random 4))) ; Defines a variable LargeList that randomly generates a number from the list
 LargeList2 ; outputs the generated value to the console
 
+; Random Operator Generator
+(define ops(list '+ '- '/ '*))
+(define random_Ops(list-ref ops (random 4))) ;set to 4 to cycle through the first 4 list entries
+random_Ops
 
 ; Took previous numbers and generated them into a single method
 (define Usable_Nums(list SmallList1 SmallList2 SmallList3 SmallList4 LargeList1 LargeList2))
@@ -53,14 +57,18 @@ attemptAnswer ; outputs the generated value to the console
 
 (newline)(display "__________________________________")
 
-;Define method ops which contains a list of the main operators
-(newline)(define ops(list '+ '- '/ '*))
-
 ;using the cartesian-product to get every possible combination of each set
-(cartesian-product ops ops ops ops ops )
+;(cartesian-product ops ops ops ops ops )
 
 ;using the C-P to get every possible combination of all the randomly selected numbers generated earlier
-((cartesian-product Usable_Nums Usable_Nums Usable_Nums Usable_Nums Usable_Nums ))
-
-
+;(cartesian-product Usable_Nums Usable_Nums Usable_Nums Usable_Nums Usable_Nums)
  
+(define (subsetsum l)
+  (map
+   (lambda (i) (apply + i))
+  #(combinations l)))
+
+; outputs all the possible answers for adding all the arrangements of the numbers
+;(define L (list SmallList1 SmallList2 SmallList3 SmallList4 LargeList1 LargeList2))
+;(newline)(display "All possible numbers when adding randomly selected numbers")
+;(subsetsum L)
