@@ -3,8 +3,10 @@
 ; The aim of the game is to use the 6 generated numbers to reach the target number.
 ; No two number may be used more than once.
 
-;4 SMALL NUMBERS
-'SMALL
+; 4 SMALL NUMBERS
+; display and newline adapted from - https://docs.racket-lang.org/reference/Writing.html
+(display "SMALL")(newline)
+
 (define SmallList1(list-ref (list 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10) (random 20)))   ; Defines a variable SmallList that randomly generates a number from one to ten
 SmallList1 ; outputs the generated value to the console
 
@@ -17,18 +19,27 @@ SmallList3 ; outputs the generated value to the console
 (define SmallList4(list-ref (list 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10) (random 20)))  ; Defines a variable SmallList that randomly generates a number from one to ten
 SmallList4 ; outputs the generated value to the console
 
-;2 LARGE NUMBERS
-'LARGE
+; 2 LARGE NUMBERS
+(display "LARGE")(newline)
 (define LargeList1(list-ref(list 25 50 75 100) (random 4))) ; Defines a variable LargeList that randomly generates a number from the list
 LargeList1 ; outputs the generated value to the console
 
 (define LargeList2(list-ref(list 25 50 75 100) (random 4))) ; Defines a variable LargeList that randomly generates a number from the list
 LargeList2 ; outputs the generated value to the console
 
-; Random Operator Generator
+; Random Operator Generators to apply to all randomly selected numbers
 (define ops(list '+ '- '/ '*))
+(display "OPERATORS")(newline)
 (define random_Ops(list-ref ops (random 4))) ;set to 4 to cycle through the first 4 list entries
 random_Ops
+(define random_Ops2(list-ref ops (random 4))) ;set to 4 to cycle through the first 4 list entries
+random_Ops2
+(define random_Ops3(list-ref ops (random 4))) ;set to 4 to cycle through the first 4 list entries
+random_Ops3
+(define random_Ops4(list-ref ops (random 4))) ;set to 4 to cycle through the first 4 list entries
+random_Ops4
+(define random_Ops5(list-ref ops (random 4))) ;set to 4 to cycle through the first 4 list entries
+random_Ops5
 
 ; Took previous numbers and generated them into a single method
 (define Usable_Nums(list SmallList1 SmallList2 SmallList3 SmallList4 LargeList1 LargeList2))
