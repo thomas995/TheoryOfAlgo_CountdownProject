@@ -5,7 +5,7 @@
 
 ; 4 SMALL NUMBERS
 ; display and newline adapted from - https://docs.racket-lang.org/reference/Writing.html
-(display "SMALL")(newline)
+(display "SMALL NUMBERS:")(newline)
 
 (define SmallList1(list-ref (list 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10) (random 20)))   ; Defines a variable SmallList that randomly generates a number from one to ten
 SmallList1 ; outputs the generated value to the console
@@ -20,7 +20,7 @@ SmallList3 ; outputs the generated value to the console
 SmallList4 ; outputs the generated value to the console
 
 ; 2 LARGE NUMBERS
-(display "LARGE")(newline)
+(display "LARGE NUMBERS:")(newline)
 (define LargeList1(list-ref(list 25 50 75 100) (random 4))) ; Defines a variable LargeList that randomly generates a number from the list
 LargeList1 ; outputs the generated value to the console
 
@@ -28,36 +28,35 @@ LargeList1 ; outputs the generated value to the console
 LargeList2 ; outputs the generated value to the console
 
 ; Random Operator Generators to apply to all randomly selected numbers
-(define ops(list '+ '- '/ '*))
-(display "OPERATORS")(newline)
+(define cart_Ops(list '+ '- '/ '*))
+(define ops(list + - / *))
 (define random_Ops(list-ref ops (random 4))) ;set to 4 to cycle through the first 4 list entries
-random_Ops
 (define random_Ops2(list-ref ops (random 4))) ;set to 4 to cycle through the first 4 list entries
-random_Ops2
 (define random_Ops3(list-ref ops (random 4))) ;set to 4 to cycle through the first 4 list entries
-random_Ops3
 (define random_Ops4(list-ref ops (random 4))) ;set to 4 to cycle through the first 4 list entries
-random_Ops4
 (define random_Ops5(list-ref ops (random 4))) ;set to 4 to cycle through the first 4 list entries
-random_Ops5
 
 ; Took previous numbers and generated them into a single method
 (define Usable_Nums(list SmallList1 SmallList2 SmallList3 SmallList4 LargeList1 LargeList2))
-(display "NUMBERS GIVEN")(newline)
+(display "NUMBERS GIVEN:")(newline)
 Usable_Nums
 
 ;TARGET NUMBER
-(display "TARGET")(newline)
+(display "TARGET NUMBER:")(newline)
 (define TargetRange(+ 101 (random 999))) ; Generates a random value from 101 to 999 that will be used later as a target to reach
 TargetRange ; outputs the generated value to the console
 
 
 ; Adds all the randomly selected numbers from the list to get an "attempt answer"
-(define attemptAnswer(+ SmallList1 SmallList2 SmallList3 SmallList4 LargeList1 LargeList2))
-(display "ATTEMPT")(newline)
-attemptAnswer ; outputs the generated value to the console
+(define attemptAnswer(random_Ops SmallList1 SmallList2 SmallList3 SmallList4 LargeList1 LargeList2))
+(display "ATTEMPTED ANSWER:")(newline)
+(display "__________________________________")(newline)
+(display "Operator Used: ")(display random_Ops)(newline)
+(display "Guess: ")(display attemptAnswer)(newline) ; outputs the generated value to the console
+(display "Are you correct? ")
 
-;IS THE ATTEMPTED ANSWER CORRECT
+
+;IS THE ATTEMPTED ANSWER CORRECT?
 (let ([arg1 attemptAnswer] [arg2 TargetRange]) ; assigns 2 values created earlier as arguments
   (cond ; the condition of the if else statement
     [(< arg1 arg2) (display "Attempt Is Too Low")] ; if the first argument is less than the second, say the attempt is too low
@@ -66,10 +65,10 @@ attemptAnswer ; outputs the generated value to the console
     
     [else (display arg2) (newline) (display "Attempt Is Correct!")])) ; else, if the attemp is correct, then display that the attempt was correct
 
-(newline)(display "__________________________________")
+(newline)(display "__________________________________")(newline)
 
 ;using the cartesian-product to get every possible combination of each set
-;(cartesian-product ops ops ops ops ops )
+;(cartesian-product cart_Ops cart_Ops cart_Ops cart_Ops cart_Ops)
 
 ;using the C-P to get every possible combination of all the randomly selected numbers generated earlier
 ;(cartesian-product Usable_Nums Usable_Nums Usable_Nums Usable_Nums Usable_Nums)
