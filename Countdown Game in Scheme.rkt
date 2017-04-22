@@ -68,10 +68,10 @@ TargetRange ; outputs the generated value to the console
 (newline)(display "__________________________________")(newline)
 
 ;using the cartesian-product to get every possible combination of each set
-;(cartesian-product cart_Ops cart_Ops cart_Ops cart_Ops cart_Ops)
+(cartesian-product cart_Ops cart_Ops cart_Ops cart_Ops cart_Ops)
 
 ;using the C-P to get every possible combination of all the randomly selected numbers generated earlier
-;(cartesian-product Usable_Nums Usable_Nums Usable_Nums Usable_Nums Usable_Nums)
+(cartesian-product Usable_Nums Usable_Nums Usable_Nums Usable_Nums Usable_Nums)
  
 (define (subsetsum l)
   (map
