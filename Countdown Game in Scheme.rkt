@@ -84,7 +84,9 @@ TargetRange ; outputs the generated value to the console
 
 (display "Are you correct? ")
 
-;IS THE ATTEMPTED ANSWER CORRECT?
+; IS THE ATTEMPTED ANSWER CORRECT?
+; Adapted let statement from -- https://docs.racket-lang.org/reference/let.html
+; Adapted Cond statement from -- https://docs.racket-lang.org/reference/if.html
 (let ([arg1 attemptAnswer] [arg2 TargetRange]) ; assigns 2 values created earlier as arguments
   
   (cond ; the condition of the if else statement
