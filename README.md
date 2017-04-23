@@ -5,7 +5,7 @@
 
 ### The aim of this project is to recreate the popular math game from the show Countdown using Scheme with the Dr.Racket IDE. ###
 
-### The computer randomly selects six numbers that will either be a collection of small numbers( _from 1 to 10_) and larger ones(_25, 50, 75 and 100_). ###
+### The computer randomly selects six numbers that will either be a collection of small numbers( _from 1 to 10_) and larger ones(_25, 50, 75 and 100_). By combining this with randomly generated operators, it will try to output a solution to reach the target with the given variables. ###
 
 ## Running The Project
 To run the project, simply take the code from the _"Countdown Game in Scheme.rkt"_ from this repository and either copy or execute the code in an IDE of your choice. 
