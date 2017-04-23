@@ -101,11 +101,18 @@ TargetRange ; outputs the generated value to the console
 (newline)(display "__________________________________")(newline)
 
 ;using the cartesian-product to get every possible combination of each set
-(display "CARTESIAN-PRODUCT OF OPERATORS AND USABLE NUMBERS:")
-;(cartesian-product cart_Ops cart_Ops cart_Ops cart_Ops cart_Ops)
+(display "CARTESIAN-PRODUCT OF OPERATORS AND USABLE NUMBERS:")(newline)
+
+(cartesian-product cart_Ops cart_Ops cart_Ops cart_Ops cart_Ops)
+
+; outputs the numbers of values for the CP of cart_Ops
+(display "LENGTH OF THE CARTESIAN-PRODUCT OF OPERATORS:")(length(cartesian-product cart_Ops cart_Ops cart_Ops cart_Ops cart_Ops))
 
 ;using the C-P to get every possible combination of all the randomly selected numbers generated earlier
-;(cartesian-product Usable_Nums Usable_Nums Usable_Nums Usable_Nums Usable_Nums Usable_Nums)
+(cartesian-product Usable_Nums Usable_Nums Usable_Nums Usable_Nums Usable_Nums Usable_Nums)(newline)
+
+; outputs the numbers of values for the CP of Usable_Nums
+(display "LENGTH OF THE CARTESIAN-PRODUCT OF USABLE NUMBERS:")(length(cartesian-product Usable_Nums Usable_Nums Usable_Nums Usable_Nums Usable_Nums Usable_Nums))
 
 ; draws line to section off the output
 (newline)(display "__________________________________")(newline)
