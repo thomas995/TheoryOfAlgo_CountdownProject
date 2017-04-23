@@ -33,9 +33,15 @@ By mixing in _randomOps(one through six)_ with _(read)_ functionality, I was abl
 
 # REFERENCES
 Moodle -> https://learnonline.gmit.ie/course/view.php?id=3758
+
 Display and Newline -> https://docs.racket-lang.org/reference/Writing.html
+
 Let Statement Adaption -> https://docs.racket-lang.org/reference/let.html
+
 Cond Statement Adaption -> https://docs.racket-lang.org/reference/if.html
+
 Loops for user input Adaption -> http://beautifulracket.com/explainer/loops.html
+
 Racket Website -> https://docs.racket-lang.org
+
 Random Generation -> http://stackoverflow.com/questions/14674165/scheme-generate-random
