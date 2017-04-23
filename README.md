@@ -30,3 +30,12 @@ The final functionality implemented into the project is some user input. This is
 By mixing in _randomOps(one through six)_ with _(read)_ functionality, I was able to get the user to enter in any number they wanted into the console. I tried applying this same logic to the operators but as of the time of writing this, I was unable to get that functionality working. Once the numbers have been entered into the textbox, an answer is generated. You will then have to match that number to the target to see if it is correct or not. If it is not, run the program another time and try again. 
 
 ### _Good Luck_.
+
+# REFERENCES
+Moodle -> https://learnonline.gmit.ie/course/view.php?id=3758
+Display and Newline -> https://docs.racket-lang.org/reference/Writing.html
+Let Statement Adaption -> https://docs.racket-lang.org/reference/let.html
+Cond Statement Adaption -> https://docs.racket-lang.org/reference/if.html
+Loops for user input Adaption -> http://beautifulracket.com/explainer/loops.html
+Racket Website -> https://docs.racket-lang.org
+Random Generation -> http://stackoverflow.com/questions/14674165/scheme-generate-random
